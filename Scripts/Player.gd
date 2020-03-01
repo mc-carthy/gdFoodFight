@@ -1,6 +1,6 @@
 extends KinematicBody
 
-const SPEED = 500
+const SPEED = 10
 var motion = Vector3()
 
 func _process(delta):
@@ -11,13 +11,13 @@ func move(delta):
 	var dz = 0
 	
 	if Input.is_action_pressed('forward'):
-		dz += 1
-	if Input.is_action_pressed('backward'):
 		dz -= 1
+	if Input.is_action_pressed('backward'):
+		dz += 1
 	if Input.is_action_pressed('right'):
 		dx += 1
 	if Input.is_action_pressed('left'):
 		dx -= 1
 	
-	motion = Vector3(dx, 0, dz) * SPEED * delta
+	motion = Vector3(dx, 0, dz) * SPEED
 	move_and_slide(motion, Vector3.UP)
