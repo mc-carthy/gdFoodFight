@@ -26,6 +26,7 @@ shape = SubResource( 1 )
 
 [node name="Desk" type="RigidBody" parent="Furniture"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0 )
+mode = 1
 mass = 100.0
 continuous_cd = true
 
