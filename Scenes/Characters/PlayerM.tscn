@@ -13,4 +13,34 @@ visible = false
 [node name="Armature" parent="." index="2" instance=ExtResource( 2 )]
 transform = Transform( 0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 0, 0, 0 )
 
+[node name="AnimationTreePlayer" parent="Armature" index="2"]
+data = {
+"active": true,
+"connections": [ "Move", "out", 0, "IdleAnimation", "Move", 0, "RunAnimation", "Move", 1 ],
+"master": NodePath("../AnimationPlayer"),
+"nodes": [ {
+"id": "out",
+"position": Vector2( 612, 155 ),
+"type": "output"
+}, {
+"blend": 0.0,
+"filter": [  ],
+"id": "Move",
+"position": Vector2( 344, 77 ),
+"type": "blend2"
+}, {
+"filter": [  ],
+"from": "Run",
+"id": "RunAnimation",
+"position": Vector2( 72, 153 ),
+"type": "animation"
+}, {
+"filter": [  ],
+"from": "Idle",
+"id": "IdleAnimation",
+"position": Vector2( 72, 33 ),
+"type": "animation"
+} ]
+}
+
 [editable path="Armature"]
