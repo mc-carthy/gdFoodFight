@@ -26,6 +26,8 @@ shape = SubResource( 1 )
 
 [node name="Desk" type="RigidBody" parent="Furniture"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0 )
+mass = 100.0
+continuous_cd = true
 
 [node name="deskCorner" type="MeshInstance" parent="Furniture/Desk"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.5, -3 )
