@@ -1,4 +1,4 @@
-extends KinematicBody
+extends "res://Scripts/Character.gd"
 
 # Movement constants
 const MAX_SPEED = 20
@@ -102,3 +102,7 @@ func animate():
 	
 	move_state = clamp(move_state, 0, 1)
 	animate.blend2_node_set_amount("Move", move_state)
+
+func _input(event):
+	if Input.is_action_just_pressed("fire"):
+		fire()
